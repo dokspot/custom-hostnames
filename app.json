@@ -1,0 +1,7 @@
+{
+  "name": "Custom hostnames",
+  "description": "app to test custom hostname functionality",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
+}
