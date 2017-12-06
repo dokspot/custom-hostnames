@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :accounts
-  root 'accounts#index'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  constraints SubdomainRouter::Constraint do
+    root 'subdomains#show'
+  end
+
+  constraints(subdomain: SubdomainRouter::Config.default_subdomain) do
+    root 'welcome#home'
+    resources :accounts
+  end
 end
