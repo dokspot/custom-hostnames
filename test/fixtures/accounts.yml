@@ -3,7 +3,9 @@
 one:
   name: One
   subdomain: one
+  host_mapping: sub.one.com
 
 two:
   name: Two
   subdomain: two
+  host_mapping: sub.two.com

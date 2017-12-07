@@ -5,7 +5,8 @@ class AccountsControllerTest < ActionDispatch::IntegrationTest
     @account = accounts(:one)
     @update = {
       name: 'Three',
-      subdomain: 'three'
+      subdomain: 'three',
+      host_mapping: 'sub.three.com'
     }
   end
 

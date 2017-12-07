@@ -10,5 +10,10 @@
   <%= @account.subdomain %>
 </p>
 
+<p>
+  <strong>Host Mapping:</strong>
+  <%= @account.host_mapping %>
+</p>
+
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>

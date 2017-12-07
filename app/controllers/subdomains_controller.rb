@@ -7,6 +7,6 @@ class SubdomainsController < ApplicationController
   private
 
   def set_account
-    @account = Account.find_by(subdomain: request.subdomain)
+    @account = Account.find_by(subdomain: request.subdomain) || Account.find_by(host_mapping: request.host)
   end
 end

@@ -1,6 +1,12 @@
+require 'constraint/domain'
+
 Rails.application.routes.draw do
 
   constraints SubdomainRouter::Constraint do
+    root 'subdomains#show'
+  end
+
+  constraints Constraint::Domain.new do
     root 'subdomains#show'
   end
 
@@ -8,4 +14,5 @@ Rails.application.routes.draw do
     root 'welcome#home'
     resources :accounts
   end
+
 end
